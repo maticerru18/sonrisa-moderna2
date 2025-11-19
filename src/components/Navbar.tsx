@@ -47,18 +47,15 @@ export const Navbar = () => {
           {/* Logo */}
           <button
             onClick={() => scrollToSection("#inicio")}
-            className="flex items-center gap-2 group"
+            className="flex items-center group"
           >
-            <div className="w-16 h-16 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
+            <div className="w-20 h-20 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
               <img 
                 src={logoImage} 
                 alt="Sonrisa Moderna Logo" 
                 className="w-full h-full object-contain"
               />
             </div>
-            <span className="text-xl font-display font-bold text-secondary">
-              Sonrisa Moderna
-            </span>
           </button>
 
           {/* Desktop Navigation */}
