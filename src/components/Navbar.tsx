@@ -49,7 +49,7 @@ export const Navbar = () => {
             onClick={() => scrollToSection("#inicio")}
             className="flex items-center group"
           >
-            <div className="w-24 h-16 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
+            <div className="w-28 h-20 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
               <img 
                 src={logoImage} 
                 alt="Sonrisa Moderna Logo" 
