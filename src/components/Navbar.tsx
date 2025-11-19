@@ -92,7 +92,7 @@ export const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden pb-6 animate-fade-in">
+          <div className="lg:hidden pb-6 animate-fade-in bg-white/95 backdrop-blur-md shadow-lg rounded-lg mx-4 mt-2 p-4">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <button
