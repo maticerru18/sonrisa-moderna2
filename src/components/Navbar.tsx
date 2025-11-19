@@ -43,13 +43,13 @@ export const Navbar = () => {
       )}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-28">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <button
             onClick={() => scrollToSection("#inicio")}
             className="flex items-center group"
           >
-            <div className="w-32 h-32 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
+            <div className="w-24 h-16 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
               <img 
                 src={logoImage} 
                 alt="Sonrisa Moderna Logo" 
