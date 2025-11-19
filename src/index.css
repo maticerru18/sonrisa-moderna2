@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base colors - Clínica dental premium */
+    --background: 0 0% 100%; /* Pure white */
+    --foreground: 200 100% 18%; /* Azul petróleo */
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 100% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 100% 18%;
+
+    /* Primary - Azul celeste para CTAs */
+    --primary: 201 100% 64%; /* #4AB8FF */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Azul petróleo para énfasis */
+    --secondary: 200 100% 18%; /* #003F5E */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted - Superficies y texto secundario */
+    --muted: 210 20% 97%; /* #F3F6F8 */
+    --muted-foreground: 220 9% 46%; /* #6B7280 */
+
+    /* Accent - Turquesa fresco */
+    --accent: 174 63% 52%; /* #30D5C8 */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 92%;
+    --input: 210 20% 92%;
+    --ring: 201 100% 64%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(201 100% 64% / 0.05), hsl(174 63% 52% / 0.05));
+    --shadow-subtle: 0 2px 8px rgba(3, 10, 18, 0.06);
+    --shadow-hover: 0 8px 24px rgba(3, 10, 18, 0.12);
+    --transition-smooth: all 120ms ease;
+  }
+
+  .dark {
+    --background: 200 100% 18%;
+    --foreground: 0 0% 100%;
+
+    --card: 200 100% 18%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 200 100% 18%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 201 100% 64%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 25%;
+    --muted-foreground: 220 9% 70%;
+
+    --accent: 174 63% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 30%;
+    --input: 210 20% 30%;
+    --ring: 201 100% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-20 md:py-24;
+  }
+
+  .container-custom {
+    @apply max-w-[1200px] mx-auto px-6;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-100 ease-out hover:shadow-[var(--shadow-hover)] hover:-translate-y-1 hover:scale-[1.02];
+  }
+
+  .fade-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
