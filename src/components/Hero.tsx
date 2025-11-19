@@ -5,7 +5,7 @@ import heroImage from "@/assets/20210116_095610-1024x1024.webp";
 export const Hero = () => {
   return (
     <section className="relative min-h-[78vh] flex items-center bg-gradient-to-br from-primary/5 to-accent/5">
-      <div className="container-custom py-16">
+      <div className="container-custom py-16 pt-24 md:pt-16">
         <div className="grid md:grid-cols-12 gap-12 items-center">
           {/* Text Content - 55% */}
           <div className="md:col-span-7 space-y-6 fade-in">
